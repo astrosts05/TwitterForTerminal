@@ -138,7 +138,7 @@ def newCmd():
         clear()
         tweetUser = input("what is the user's name? | ")
         tweetCount = input("how many tweets do you want to see? | ")
-        timeline = api.user_timeline(user_id="1268218110374563841", count=tweetCount, tweet_mode="extended")
+        timeline = api.user_timeline(user_id="user", count=tweetCount, tweet_mode="extended")
         textonly_tweets = [tweet.full_text for tweet in timeline]
         print(*textonly_tweets, sep="\n")
         print("                           ")
@@ -154,7 +154,7 @@ def newCmd():
         #
     elif cmdToPerform == "mentions":
         clear()
-        mentions = api.mentions_timeline(user_id="1268218110374563841", count=6, tweet_mode="extended")
+        mentions = api.mentions_timeline(user_id="user", count=6, tweet_mode="extended")
         textonly_mentions = [tweet.full_text for tweet in mentions]
         print(*textonly_mentions, sep="\n")
         # mentionCount = 0
